@@ -6,7 +6,7 @@
       <router-link to="/about"><span>关于我</span><span class="en">About</span></router-link>
       <a href="newlist.html"><span>慢生活</span><span class="en">Life</span></a>
       <a href="moodlist.html"><span>碎言碎语</span><span class="en">Doing</span></a>
-      <a href="share.html"><span>模板分享</span><span class="en">Share</span></a>
+      <router-link to="/ma"><span>文章管理</span><span class="en">Article</span></router-link>
       <a href="knowledge.html"><span>学无止境</span><span class="en">Learn</span></a>
       <a href="book.html"><span>留言版</span><span class="en">Gustbook</span></a></nav>
 </header>

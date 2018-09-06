@@ -12,7 +12,7 @@
             <div class="col-md-12">
                 <h3>Interact with your audience to improve brand engagement and communication.</h3>
                 <br /><br />
-                <p><img class="pull-left" alt="img" src="@/assets/images/home-about.jpg" width="450" style="padding:0 20px 20px 0;">	Internet marketing specialists at AmazingBiz can help you select the best social media site to advertise on. As with social media marketing, you need to select the appropriate social media site according to your business goals, the customers you want to reach, resources, and timeline. We will develop effective ads targeted according to geographic location, age, gender, interests, and more.</p>
+                <p><img class="pull-left" alt="img" src="" width="450" style="padding:0 20px 20px 0;">	Internet marketing specialists at AmazingBiz can help you select the best social media site to advertise on. As with social media marketing, you need to select the appropriate social media site according to your business goals, the customers you want to reach, resources, and timeline. We will develop effective ads targeted according to geographic location, age, gender, interests, and more.</p>
                 <p>Maecenas ut scelerisque ante. Maecenas nunc libero, suscipit ut adipiscing sit amet, accumsan sed eros. Vestibulum varius lacus eget molestie tempor. Nam bibendum ullamcorper laoreet. Sed vestibulum erat ac est facilisis commodo.</p>
                 
                 <p>

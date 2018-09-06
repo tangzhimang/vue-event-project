@@ -37,6 +37,13 @@
                 layout="total, sizes, prev, pager, next, jumper"
                 :total="totalNum">
                 </el-pagination>
+            <div id="test">
+                <p>{{ count }}</p>
+                <p>
+                    <button @click="increment">+</button>
+                    <button @click="decrement">-</button>
+                </p>
+            </div>
         </el-main>
         <el-aside style="margin:0px;padding:0px;overflow-x:hidden" width="250px">
                 <div class="weather">
@@ -86,6 +93,9 @@
 
 <script>
 import axios from "axios";
+import loginByusername from '@/api/login'
+import store from '@/store'
+
 export default {
     name:"blogIndex",
     data() {
@@ -94,11 +104,15 @@ export default {
             articles : [],
             currentPage: 1,
             totalNum : 0,
-            pageSize : 3
+            pageSize : 3,
+            username : 'tom',
+            password : '123456'
         }
     },
     computed: {
-    
+        count() {
+            return store.state.count
+        }
     },
     methods: {
         async getArticles (page,size) {
@@ -132,10 +146,50 @@ export default {
             console.log(`当前页: ${val}`);
             this.currentPage = val,
             this.getArticles(this.currentPage,this.pageSize)
+        },
+        showMockJs(){
+            // 使用 Mock
+            var Mock = require('mockjs')
+            var data = Mock.mock({
+                // 属性 list 的值是一个数组，其中含有 1 到 10 个元素
+                'list|1-10': [{
+                    // 属性 id 是一个自增数，起始值为 1，每次增 1
+                    'id|+1': 1
+                }],
+                name: {
+                        first: '@FIRST',
+                        middle: '@FIRST',
+                        last: '@LAST',
+                        full: '@first @middle @last'
+                }
+            })
+            // 输出结果
+            console.log(JSON.stringify(data,null,4))
+        },
+        login() {
+            loginByusername(this.username,this.password).then(
+                response => {
+                    const data = response.data;
+                    console.log(JSON.stringify(data))
+                }
+            ).catch(
+                error => {
+                    console.log(error)
+                }
+            )
+        },
+        increment () {
+            store.commit('increment')
+        },
+        decrement () {
+            store.commit('decrement')
         }
+
     },
     created: function() {
-        this.getArticles(1,3);
+        //this.getArticles(1,3);
+        //this.showMockJs();
+        this.login()
     }
     
 }

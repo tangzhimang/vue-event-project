@@ -1,6 +1,7 @@
 <template>
     <div class="maincontent">
-    <el-tabs type="card">
+    <h1 class="b_nav"><span>这一切，都不能挽回了吗？</span><span class="left_nav">文章管理</span></h1>
+    <el-tabs type="border-card">
         <el-tab-pane label="新增文章">
             <div class="tabcontent">
              <!-- <h2>新增文章</h2> -->
@@ -20,8 +21,8 @@
                         :on-success="handleAvatarSuccess"
                         :before-upload="beforeAvatarUpload"
                         >
-                        <img v-if="imageUrl" :src="imageUrl" class="avatar">
-                        <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+                        <img v-if="imageUrl" :src="imageUrl" class="avatar"  style="border:dashed 1px #d9d9d9">
+                        <i v-else class="el-icon-plus avatar-uploader-icon"  style="border:dashed 1px #d9d9d9"></i>
                         </el-upload>
                     </el-form-item>
                     <el-form-item label="文章内容" >
@@ -161,6 +162,7 @@ export default {
 .tabcontent {
     margin: 10px 20px;
     height: auto;
+    
 }
 .quill-code {
     border: none;
@@ -168,7 +170,7 @@ export default {
     padding-top: 50px;
 }
  .avatar-uploader.el-upload {
-    border: 1px dashed #d9d9d9;
+    border: solid 1px #d9d9d9;
     border-radius: 6px;
     cursor: pointer;
     position: relative;
@@ -190,4 +192,10 @@ export default {
     height: 178px;
     display: block;
   }
+    h1.b_nav { border-bottom: #F1F1F1 1px solid; font-size: 12px; font-weight: normal; line-height: 40px; height: 40px; }
+    h1.b_nav span{float:right; color:#999}
+    h1.b_nav .left_nav {
+        float:left;
+        font-size:20px;
+    }
 </style>
